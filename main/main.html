@@ -6,21 +6,14 @@
 	<body>
 		<h3>
 			WELCOME TO MINI PAINT
+			<input type="color" style="float:right;" id="color" value="#00CC00">
 		</h3>
 			<canvas id="canvas1" width="1000" height="700" style="position:absolute;border:1px solid black;"></canvas>
 			<canvas id="canvas2" width="1000" height="700" style="opacity:0.5;border:1px solid black;"></canvas>
-			<script type="text/javascript" src="test1.js"></script>
-			<script type="text/javascript" src="test2.js"></script>
-			<button type="submit" onclick="basic('d')" style="float:right;">Draw</button>
+			<button type="submit" onclick="basic('d');" style="float:right;">Draw</button>
 			<button type="submit" onclick="basic('m')" style="float:right;">Move</button>
 			<button type="submit" onclick="basic('p')" style="float:right;">Play a Game</button>
 			<button type="submit" onclick="location.reload()" style="float:right;">Start</button>
-			<div style="float:right;">
-				<br>
-				<br>
-				<h3>Colour Palette</h3>
-				<button type="submit" onclick="select_colour()" style="width:20px;height:20px;background:red;"></button>
-				<button type="submit" onclick="select_colour()" style="width:20px;height:20px;background:red;"></button>
-			</div>
 	</body>
+	<script type="text/javascript" src="test1.js"></script>
 </html>

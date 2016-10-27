@@ -1,3 +1,5 @@
+
+
 var x=document.getElementById('canvas1');
 var ctx=x.getContext('2d');
 x.width=1000;
@@ -88,30 +90,32 @@ function move(value)
 	}
 }
 
+var brushcolor='#00CC00';
+
 function cover_path(a,b)
 {
 	ctx.beginPath();
 	ctx.rect(a,b,5,5);
-	ctx.fillStyle='#00CC00';
+	ctx.fillStyle=brushcolor;
 	ctx.fill();
 	ctx.lineWidth=6;
-	ctx.strokeStyle='#00CC00';
+	ctx.strokeStyle=brushcolor;
 	ctx.stroke();
 }
 
-var v;
 function draw(value)
 {
+	console.log(value);
 	if(37 in keypressed && pacman_x>=20)
 	{
 		v=pacman_x;
         	pacman_x-=pacman_speed*value;
 		ctx.beginPath();
 		ctx.rect(pacman_x,pacman_y,5,5);
-		ctx.fillStyle='#00CC00';
+		ctx.fillStyle=brushcolor;
 		ctx.fill();
 		ctx.lineWidth=6;
-		ctx.strokeStyle='#00CC00';
+		ctx.strokeStyle=brushcolor;
 		ctx.stroke();
 		cover_path(v,pacman_y);
     	}
@@ -121,10 +125,10 @@ function draw(value)
         	pacman_y-=pacman_speed*value;
 		ctx.beginPath();
 		ctx.rect(pacman_x,pacman_y,5,5);
-		ctx.fillStyle='#00CC00';
+		ctx.fillStyle=brushcolor;
 		ctx.fill();
 		ctx.lineWidth=6;
-		ctx.strokeStyle='#00CC00';
+		ctx.strokeStyle=brushcolor;
 		ctx.stroke();
 		cover_path(pacman_x,v);
 	}
@@ -134,10 +138,10 @@ function draw(value)
 	        pacman_x+=pacman_speed*value;
 		ctx.beginPath();
 		ctx.rect(pacman_x,pacman_y,5,5);
-		ctx.fillStyle='#00CC00';
+		ctx.fillStyle=brushcolor;
 		ctx.fill();
 		ctx.lineWidth=6;
-		ctx.strokeStyle='#00CC00';
+		ctx.strokeStyle=brushcolor;
 		ctx.stroke();
 		cover_path(v,pacman_y);
 	}
@@ -147,10 +151,10 @@ function draw(value)
         	pacman_y+=pacman_speed*value;
 		ctx.beginPath();
 		ctx.rect(pacman_x,pacman_y,5,5);
-		ctx.fillStyle='#00CC00';
+		ctx.fillStyle=brushcolor;
 		ctx.fill();
 		ctx.lineWidth=6;
-		ctx.strokeStyle='#00CC00';
+		ctx.strokeStyle=brushcolor;
 		ctx.stroke();
 		cover_path(pacman_x,v);
 	}
@@ -160,10 +164,10 @@ function make_canvas_draw()
 {
 	ctx.beginPath();
 	ctx.rect(pacman_x,pacman_y,5,5);
-	ctx.fillStyle='#00CC00';
+	ctx.fillStyle=brushcolor;
 	ctx.fill();
 	ctx.lineWidth=6;
-	ctx.strokeStyle='#00CC00';
+	ctx.strokeStyle=brushcolor;
 	ctx.stroke();
 }
 
@@ -172,10 +176,10 @@ function make_canvas_move()
 	ctx1.clearRect(0,0,1000,700);
 	ctx1.beginPath();
 	ctx1.rect(pacman_x,pacman_y,5,5);
-	ctx1.fillStyle='#00CC00';
+	ctx1.fillStyle=brushcolor;
 	ctx1.fill();
 	ctx1.lineWidth=6;
-	ctx1.strokeStyle='#00CC00';
+	ctx1.strokeStyle=brushcolor;
 	ctx1.stroke();
 }
 
@@ -214,3 +218,8 @@ function basic(val)
 	}
 }
 //make_canvas_move();
+
+//Change color
+document.getElementById("color").addEventListener("input", function (){
+	brushcolor = document.getElementById("color").value;
+});
