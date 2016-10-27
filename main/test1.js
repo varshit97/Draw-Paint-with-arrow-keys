@@ -10,8 +10,14 @@ var ctx1=c.getContext('2d');
 
 var pacman_x=40,pacman_y=35,pacman_speed=200,time=Date.now(),pacman_speed_drop=200;
 var keypressed={};
-window.addEventListener('keydown',function(e){keypressed[e.keyCode]=true;});
-window.addEventListener('keyup',function(e){delete keypressed[e.keyCode];});
+window.addEventListener('keydown', function(e) {
+	keypressed[e.keyCode]=true;
+	e.preventDefault();
+});
+window.addEventListener('keyup', function(e) {
+	delete keypressed[e.keyCode];
+	e.preventDefault();
+});
 
 var height=15,score=0,position=19,flag=0;
 var si1,si2,si3;
