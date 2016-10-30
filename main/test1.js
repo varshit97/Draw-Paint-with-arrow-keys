@@ -217,6 +217,18 @@ function basic(val)
 		get_score();
 	}
 }
+function increaseSpeed(){
+	pacman_speed += 50;
+	if(pacman_speed >= 900){
+		pacman_speed = 900;
+	}
+}
+function decreaseSpeed(){
+	pacman_speed -= 50;
+	if(pacman_speed <= 50){
+		pacman_speed = 50;
+	}
+}
 //make_canvas_move();
 
 //Change color
