@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome to mini-paint</title>
+	</head>
+	<body>
+		<center>
+		<h1>
+			WELCOME TO MINI PAINT
+		</h1>
+		<div class="controls">
+		<button onclick="basic('m')">Move</button>
+			<button onclick="basic('d');">Draw</button>
+			<input type="color" id="color" value="#00CC00">
+			<button onclick="increaseSpeed()">Speed+</button>
+			<button onclick="decreaseSpeed()">Speed-</button>
+
+			<button onclick="location.reload()">Clear</button>
+		</div>
+		</center>
+		<div class="draw-area">
+			<canvas id="canvas1" width="1000%" height="700" style="position:absolute;border:1px solid black;"></canvas>
+			<canvas id="canvas2" width="1000%" height="700" style="opacity:0.5;border:1px solid black;"></canvas>
+		</div>
+
+	</body>
+	<style>
+	html, body{
+		margin: 0;
+		padding: 0;
+	}
+	.draw-area{
+		display: inline-block;
+		width: 100%;
+		position: relative;
+	}
+	.controls{
+	text-align: center;
+		display: inline-block;
+		width: 100%;
+	}
+	canvas {
+	  height: 90vh;
+	  width: 100vw;
+	  display: block;
+	}
+
+	</style>
+	<script type="text/javascript" src="draw.js"></script>
+</html>
