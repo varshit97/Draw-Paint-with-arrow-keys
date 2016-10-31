@@ -32,7 +32,7 @@ function drop_block()
 		ctx.clearRect(0,0,1000,700);
 		var imageObj=new Image();
 	     	imageObj.onload=function() {ctx.drawImage(imageObj,500,350,100,100);};
-	      	imageObj.src='image2.png';
+	      	imageObj.src='game_over.png';
 		return ;
 	}
 	ctx.beginPath();
