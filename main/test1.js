@@ -177,7 +177,7 @@ function make_canvas_move()
 {
 	ctx1.clearRect(0,0,1000,700);
 	ctx1.beginPath();
-	ctx1.rect(pacman_x,pacman_y,5,5);
+	ctx1.rect(pacman_x,pacman_y,brush_size,brush_size);
 	ctx1.fillStyle=brushcolor;
 	ctx1.fill();
 	ctx1.lineWidth=6;
