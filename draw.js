@@ -21,6 +21,8 @@ window.addEventListener('keyup', function(e) {
 	e.preventDefault();
 });
 
+var brush_size = 5;
+
 var height=15,score=0,position=19,flag=0;
 var si1,si2,si3;
 
@@ -163,7 +165,7 @@ function draw(value)
 function make_canvas_draw()
 {
 	ctx.beginPath();
-	ctx.rect(pacman_x,pacman_y,5,5);
+	ctx.rect(pacman_x,pacman_y,brush_size,brush_size);
 	ctx.fillStyle=brushcolor;
 	ctx.fill();
 	ctx.lineWidth=6;
@@ -175,7 +177,7 @@ function make_canvas_move()
 {
 	ctx1.clearRect(0,0,1000,700);
 	ctx1.beginPath();
-	ctx1.rect(pacman_x,pacman_y,5,5);
+	ctx1.rect(pacman_x,pacman_y,brush_size,brush_size);
 	ctx1.fillStyle=brushcolor;
 	ctx1.fill();
 	ctx1.lineWidth=6;
@@ -227,6 +229,15 @@ function decreaseSpeed(){
 	pacman_speed -= 50;
 	if(pacman_speed <= 50){
 		pacman_speed = 50;
+	}
+}
+
+function increaseBrush(){
+	brush_size+=1;
+}
+function decreaseBrush(){
+	if(brush_size > 1){
+		brush_size-=1;
 	}
 }
 //make_canvas_move();
