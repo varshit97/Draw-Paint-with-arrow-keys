@@ -2,6 +2,30 @@
 <html>
 	<head>
 		<title>Welcome to mini-paint</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<style media="screen">
+			html {
+				font-family: 'Open Sans', sans-serif;
+			}
+			h1 {
+				margin: 6px;
+			}
+			button {
+			    padding: 6px 15px;
+			    margin-bottom: 10px;
+			    border: 1px solid black;
+			    background: none;
+			    box-shadow: none;
+			    font-weight: bold;
+				outline: none;
+			}
+			input {
+				border: 1px solid black;
+			    background: none;
+			    padding: 3px;
+			    height: 19px;
+			}
+		</style>
 	</head>
 	<body>
 		<center>
@@ -9,7 +33,7 @@
 			WELCOME TO MINI PAINT
 		</h1>
 		<div class="controls">
-		<button onclick="basic('m')">Move</button>
+			<button onclick="basic('m')">Move</button>
 			<button onclick="basic('d');">Draw</button>
 			<input type="color" id="color" value="#00CC00">
 			<button onclick="increaseSpeed()">Speed+</button>
