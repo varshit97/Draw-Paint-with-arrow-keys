@@ -164,6 +164,10 @@ function draw(value)
 
 function make_canvas_draw()
 {
+	ctx.lineCap = 'round';
+	ctx.lineJoin = 'round';
+	ctx.shadowColor = brushcolor;
+	ctx.shadowBlur = 1;
 	ctx.beginPath();
 	ctx.rect(pacman_x,pacman_y,brush_size,brush_size);
 	ctx.fillStyle=brushcolor;
